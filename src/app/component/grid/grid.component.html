@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>view_array</mat-icon>
+   </button>
+   <span>Asset Management</span>
+   <span class="example-spacer"></span>
+   <button mat-raised-button color="warn"  (click)="logout()">LogOut</button>  
+  </mat-toolbar>
+
+
+<html>
+  <body>
+
+
+<!-- <ag-grid-angular
+
+style="width: 500px; height: 500px;" 
+	class="ag-theme-alpine"
+	[rowData]="rowData$ | async" 
+  [columnDefs]="colDefs"
+	
+
+></ag-grid-angular> -->
+
+
+
+<!-- Button to clear selection -->
+<!-- <button (click)="clearSelection()">Clear Selection</button> -->
+<!-- AG Grid Angular Component -->
+<ag-grid-angular
+   style="width: 100%; height: 100%"
+   class="ag-theme-alpine"
+   [columnDefs]="columnDefs"
+   [defaultColDef]="defaultColDef"
+   [rowData]="rowData$ | async"
+   [rowSelection]="'multiple'"
+   [animateRows]="true"
+   (gridReady)="onGridReady($event)"
+   (cellClicked)="onCellClicked($event)"
+   
+
+ ></ag-grid-angular>
+
+
+<button type="button" class="btn btn-primary btn-block mt-4 w-20" routerLink="/home">Details</button>
+</body>
+</html>

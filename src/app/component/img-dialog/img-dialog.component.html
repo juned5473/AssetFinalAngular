@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Add Image</h1>
+<div mat-dialog-content>
+<form [formGroup]="imgForm">
+    <!-- <button mat-raised-button color="warn" type="button" (click)="getimage()">View</button> -->
+    <img [src]="url" style="width: 250px; height:200px">
+<!-- <input formControlName="assetId" type="number"> -->
+<input formControlName="img" type="file" #Image accept="image/*" (change)="onFileSelected($event)">
+<button mat-raised-button color="warn" type="button" (click)="onSubmit(selectedFile)">Upload</button>
+</form> 
+</div>
+

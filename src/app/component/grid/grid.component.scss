@@ -1,0 +1,36 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-alpine.css';
+
+html, body {
+   
+   padding: 20px;
+   //margin-left: 30px;
+   box-sizing: border-box;
+   -webkit-overflow-scrolling: touch;
+   
+
+}
+
+body{
+   height: 500px;
+   width: 80%;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  

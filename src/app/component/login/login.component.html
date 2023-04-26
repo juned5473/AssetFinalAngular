@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+     <mat-icon>view_array</mat-icon>
+   </button>
+   <span>Asset Management</span>
+   <span class="example-spacer"></span>
+   
+  </mat-toolbar>
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">CUSTOMER LOGIN</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form [formGroup]="loginForm">
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['email'].dirty  && loginForm.hasError('required','email')">
+                                    <span class="fa fa-envelope p-2"></span>
+                                    <input formControlName="email" type="text" placeholder="Enter Your Email">
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['email'].dirty  && loginForm.hasError('required','email')" class="text-danger">*Email is Required.</small>
+                            <div class="form-group pt-3">
+                                <div class="input-field" [class.error]="loginForm.controls['password'].dirty  && loginForm.hasError('required','password')">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input formControlName="password" [type]="type" placeholder="Enter Your Password">
+                                    <span (click)="hideshowpass()" class="fa {{eyeIcon}}"></span>
+                                </div>
+                            </div>
+                            <small *ngIf="loginForm.controls['password'].dirty  && loginForm.hasError('required','password')" class="text-danger">*Password is Required.</small>
+                            <div class="form-inline fr mt-4">
+                                <a id="forget" class="font-weight-bold">Forget Password ?</a>
+                            </div>
+                            <button (click)="OnLogin()" type="submit" color="primary" class="btn btn-primary btn-block mt-4 w-100">LOGIN</button>
+                            <div class="text-center pt-4 text-muted">Dont Have Account?<a id="forget" routerLink="/signup">SignUp</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Add New Asset</h1>
+<div mat-dialog-content>
+   <form [formGroup]="assetForm">
+    
+    <mat-form-field appearance="outline">
+        <mat-label>Asset Name</mat-label>
+        <input formControlName="assetName" matInput placeholder="Asset Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Asset Category</mat-label>
+        <mat-select formControlName="assetCategory" placeholder="Category">
+            <mat-option value="Machinary">Machinary</mat-option>
+            <mat-option value="Vehicle">Vehicles</mat-option>
+            <mat-option value="Heavy Equipments">Heavy Equipments</mat-option>
+            <mat-option value="Safety Equipments">Safety Equipments</mat-option>
+        </mat-select>    
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Asset Type</mat-label>
+        <input formControlName="assetType" matInput placeholder="Asset Type">
+    </mat-form-field>
+   </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addAsset()">{{actionBtn}}</button>
+</div>
